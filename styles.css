@@ -1,13 +1,41 @@
-.welcome_welcome-text {
+.welcome {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+.middle_button-link {
+    padding: 2rem;
+}
 
+.middle_button {
+    padding: 0.5rem;
+}
 
-.welcome_astolfo-image {
-    display: flex;
-    justify-content: center;
-    width: 120px;
-    height: auto;
+.welcome_cat-image {
+    width: 100px;
+    height: 100px;
+
+    animation: 2.5s spin linear infinite; 
+}
+
+.welcome_cat-image:hover {
+    animation-play-state: paused;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg)
+    }
+}
+
+body {
+    background-image: url("https://www.icegif.com/wp-content/uploads/2022/09/icegif-1618.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
