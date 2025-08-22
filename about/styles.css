@@ -1,0 +1,23 @@
+.go-back-button-link {
+    margin: 0.75rem;
+}
+
+.go-back-button {
+    padding: 0.5rem;
+}
+
+body {
+    background-image: url("./img/fire.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
+    margin: 0;
+}
+
+.body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
