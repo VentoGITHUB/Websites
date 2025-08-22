@@ -1,0 +1,13 @@
+.welcome_welcome-text {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.welcome_astolfo-image {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    height: auto;
+}
