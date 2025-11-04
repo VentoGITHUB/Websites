@@ -1,3 +1,7 @@
+:root {
+    --catRotation: 0deg;
+}
+
 .body {
     display: flex;
     flex-direction: column;
@@ -16,31 +20,48 @@
     color: white;
 }
 
-.middle_button-link {
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     padding: 2rem;
+    gap: 20px;
 }
 
-.middle_button {
-    padding: 0.5rem;
+.buttons-prop {
+    padding: 10px;
+}
+
+.middle_button-link {
+    padding: 2rem;
 }
 
 .cat-image {
     width: 100px;
     height: 100px;
+    border-radius: 15px;
 
-    animation: 2.5s spin linear infinite; 
+    animation: 2.5s spin-right linear infinite; 
 }
 
 .welcome_cat-image:hover {
     animation-play-state: paused;
 }
 
-@keyframes spin {
+@keyframes spin-right {
     0%{
-        transform: rotate(0deg);
+        transform: rotate(var(--catRiotation));
     }
     100%{
         transform: rotate(360deg)
+    }
+}
+@keyframes spin-left {
+    0%{
+        transform: rotate(var(--catRotation));
+    }
+    100%{
+        transform: rotate(-360deg);
     }
 }
 
