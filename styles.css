@@ -1,5 +1,6 @@
 :root {
     --catRotation: 0deg;
+    --catDirection: 1;
 }
 
 .body {
@@ -13,8 +14,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    min-height: 100vh;
-}
+    min-height: 100vh; }
 
 .welcome-text{
     color: white;
@@ -32,36 +32,24 @@
     padding: 10px;
 }
 
-.middle_button-link {
-    padding: 2rem;
-}
-
 .cat-image {
     width: 100px;
     height: 100px;
     border-radius: 15px;
 
-    animation: 2.5s spin-right linear infinite; 
+    animation: spin 2.5s linear infinite; 
 }
 
-.welcome_cat-image:hover {
+.cat-image:hover {
     animation-play-state: paused;
 }
 
-@keyframes spin-right {
-    0%{
-        transform: rotate(var(--catRiotation));
-    }
-    100%{
-        transform: rotate(360deg)
-    }
-}
-@keyframes spin-left {
-    0%{
+@keyframes spin {
+    from {
         transform: rotate(var(--catRotation));
     }
-    100%{
-        transform: rotate(-360deg);
+    to {
+        transform: rotate(calc(var(--catRotation) + 360deg * var(--catDirection)));
     }
 }
 

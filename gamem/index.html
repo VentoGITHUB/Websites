@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>gamem epic websit</title>
+
+        <link rel="icon" href="./silly-32.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="./silly-16.png" sizes="16x16" type="image/png">
+
+        <style>
+            .text {
+                color: white;
+            }
+
+            #canvas {
+                border: 2px solid black;
+            }
+
+            body {
+                background-image: url("./fire.gif");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+
+                min-height: 100vh;
+                margin: 0;
+            }
+
+            .body {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="body">
+            <h1 class="text">gamem</h1>
+            <canvas id="canvas" width="640" height="360"></canvas>
+        </div>
+        <script src="./main.js"></script>
+    </body>
+
+</html>player
