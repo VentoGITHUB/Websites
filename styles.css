@@ -1,8 +1,3 @@
-:root {
-    --catRotation: 0deg;
-    --catDirection: 1;
-}
-
 .body {
     display: flex;
     flex-direction: column;
@@ -14,22 +9,10 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    min-height: 100vh; }
+}
 
 .welcome-text{
     color: white;
-}
-
-.buttons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 2rem;
-    gap: 20px;
-}
-
-.buttons-prop {
-    padding: 10px;
 }
 
 .cat-image {
@@ -46,22 +29,26 @@
 
 @keyframes spin {
     from {
-        transform: rotate(var(--catRotation));
+        transform: rotate(0deg);
     }
     to {
-        transform: rotate(calc(var(--catRotation) + 360deg * var(--catDirection)));
+        transform: rotate(360deg);
     }
+}
+
+.menu {
+    background-color: #5c0099;
+    border: 0.2rem solid #ffd500;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    width: 90vw;
+    min-height: 60vh;
 }
 
 body {
-    background-image: url("./img/fire.gif");
+    background-image: linear-gradient(to top, #3d0066 50%, #fdc500 100%);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
 
-.centered-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

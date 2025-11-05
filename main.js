@@ -1,5 +1,6 @@
 const rootStyle = document.documentElement.style;
 
+/*
 const btnAlert = document.querySelector(".button-alert");
 
 btnAlert.onclick = () => {
@@ -24,3 +25,4 @@ sillyImg.addEventListener("click", () => {
     const dir = catRight ? 1 : -1;
     rootStyle.setProperty("--catDirection", dir);
 });
+*/
