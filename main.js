@@ -1,28 +1,16 @@
 const rootStyle = document.documentElement.style;
 
-/*
-const btnAlert = document.querySelector(".button-alert");
+const welcomeText = document.querySelector(".welcome-text");
 
-btnAlert.onclick = () => {
-    alert("Congratulations! You have just won an iPhone 6s!");
-    window.location.href = "https://youtu.be/dQw4w9WgXcQ?si=VBRLATKEC_NYAddn&t=1"; // hehehe
-}
+setInterval(() => {
+    const range = 0.1;
+    const offsetX = -range + Math.random() * (range * 2 + 1);
+    const offsetY = -range + Math.random() * (range * 2 + 1);
 
-const sillyImg = document.querySelector(".cat-image");
-let catRight = true;
+    welcomeText.style.transform = `translate(${offsetX}rem, ${offsetY}rem)`;
 
-function updateRotation() {
-    const style = getComputedStyle(sillyImg);
-    const matrix = new DOMMatrixReadOnly(style.transform);
-    const curRot = Math.atan2(matrix.b, matrix.a) * (180 / Math.PI);
-    rootStyle.setProperty("--catRotation", `${curRot}deg`);
-}
-
-sillyImg.addEventListener("click", () => {
-    updateRotation();
-
-    catRight = !catRight;
-    const dir = catRight ? 1 : -1;
-    rootStyle.setProperty("--catDirection", dir);
-});
-*/
+    /*
+    console.log(`OffsetX: ${offsetX}`);
+    console.log(`OffsetY: ${offsetY}`);
+    */
+}, 100);

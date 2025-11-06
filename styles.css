@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "Maple Mono";
+    src: url("./src/maple-mono.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
 .body {
     display: flex;
     flex-direction: column;
@@ -11,19 +18,20 @@
     flex-direction: column;
 }
 
-.welcome-text{
-    color: white;
+.welcome-text {
+    transition: transform 0.2s ease;
 }
 
-.cat-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 15px;
+.silly-image {
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 0.9375rem;
+    margin: 1rem;
 
-    animation: spin 2.5s linear infinite; 
+    animation: spin 2.5s linear infinite;
 }
 
-.cat-image:hover {
+.silly-image:hover {
     animation-play-state: paused;
 }
 
@@ -37,18 +45,44 @@
 }
 
 .menu {
-    background-color: #5c0099;
-    border: 0.2rem solid #ffd500;
-    border-radius: 2rem;
-    margin-top: 2rem;
-    width: 90vw;
-    min-height: 60vh;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 100vw;
+    min-height: 70vh;
+    backdrop-filter: blur(0.5rem);
+    border: solid 0.2rem gray;
+
+    display: grid;
+    grid-template-columns: repeat(16, calc(100vw / 16));
+    grid-template-rows: repeat(16, calc(70vh / 16));
+}
+
+.about {
+    width: 30rem;
+    padding-bottom: 1rem;
+    border: dotted 0.2rem #2a2d2f;
+
+    grid-area: 1 / 1 / 5 / 8;
+}
+
+.cat-image {
+    float: right;
+    width: 10rem;
+}
+
+.cat-image:hover {
+    transform: scale(1.4);
+    filter: saturate(1.8);
+    transition: all 0.2s;
 }
 
 body {
-    background-image: linear-gradient(to top, #3d0066 50%, #fdc500 100%);
+    background-image: url(./src/fire.gif);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    font-family: "Maple Mono", sans-serif;
+    color: white;
 
 }
