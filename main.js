@@ -1,5 +1,6 @@
-const rootStyle = document.documentElement.style;
+const root = document.documentElement;
 
+// Welcome text
 const welcomeText = document.querySelector(".welcome-text");
 
 setInterval(() => {
@@ -14,3 +15,42 @@ setInterval(() => {
     console.log(`OffsetY: ${offsetY}`);
     */
 }, 100);
+
+// Silly
+import { PartsManager } from "./part.js";
+
+let pm;
+const img = new Image();
+img.src = "./src/silly-16.png";
+img.style.width = "150%";
+img.style.height = "150%";
+
+window.addEventListener("DOMContentLoaded", () => {
+    pm = new PartsManager(img);
+})
+
+window.addEventListener("mousemove", (e) => {
+    pm.createPart(e.x, e.y);
+})
+
+// rndColor
+function rgbToHex(r, g, b) {
+    function compToHex(c) {
+        const hex = c.toString(16);
+        return hex.lenght == 1 ? "0" + hex : hex;
+    }
+    return `#${compToHex(r)}${compToHex(g)}${compToHex(b)}`;
+}
+function rnd255() {
+    return Math.floor(Math.random() * 256);
+}
+const genColor = rgbToHex(rnd255(), rnd255(), rnd255()); 
+root.style.setProperty("--rndColor", `${genColor}`);
+
+document.querySelector(".rndColor-hex").innerHTML = genColor;
+
+document.querySelector(".rndColor-preview").onclick = () => {
+    navigator.clipboard.writeText(genColor);
+}
+
+
