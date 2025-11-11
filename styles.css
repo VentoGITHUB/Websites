@@ -24,6 +24,11 @@
     transform: scale(1.2) rotate(5deg);
 }
 
+.text-title {
+    font-weight: bold;
+    font-style: italic;
+}
+
 /* Top */
 .welcome {
     display: flex;
@@ -95,11 +100,6 @@
 
     grid-area: 5 / 1 / 9 / 2;
 }
-.rndColor-title {
-    margin-bottom: 0.4rem;
-    font-weight: bold;
-    font-style: italic;
-}
 .rndColor-preview {
     width: clamp(3rem, 5vw, 7rem);
     height: clamp(3rem, 5vw, 7rem);
@@ -121,14 +121,37 @@
 
     grid-area: 5 / 2 / 9 / 4; 
 }
-.rndCats-title {
-    font-weight: bold;
-    font-style: italic;
-}
 .rndCats-img {
     width: clamp(3rem, 8vw, 8rem);
     height: clamp(3rem, 8vh, 8rem);
     border-radius: 0.9375rem;
+}
+
+/* Caprisun */
+.caprisun {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    grid-area: 9 / 1 / 14 / 4;
+}
+
+/* Web (yes i choose the dumbest name for it idc) */
+.web {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    grid-area: 14 / 1 / 17 / 4;
+}
+.web-copy {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 0.5rem;
 }
 
 #canvas {
