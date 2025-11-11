@@ -47,6 +47,7 @@ export class PartsManager {
             const part = this.parts[i];
             part.x += part.spdX;
             part.y += part.spdY;
+
             part.opacity -= 0.01;
             if (part.opacity <= 0) {
                 this.parts.splice(i, 1);

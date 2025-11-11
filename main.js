@@ -53,4 +53,11 @@ document.querySelector(".rndColor-preview").onclick = () => {
     navigator.clipboard.writeText(genColor);
 }
 
-
+// rndCats
+async function rndCat() {
+  const res = await fetch('cats.json');
+  const files = await res.json();
+  const random = files[Math.floor(Math.random() * files.length)];
+  document.querySelector('.rndCats-img').src = random;
+}
+rndCat();

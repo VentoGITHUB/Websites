@@ -24,11 +24,6 @@
     transform: scale(1.2) rotate(5deg);
 }
 
-.borduh { border: dotted 0.2rem #2a2d2f; padding: 0.3rem; }
-/* i know that it was supposed to be only for the border
-but i dont want to create another class,
-and i am to lazy to change the name */
-
 /* Top */
 .welcome {
     display: flex;
@@ -74,6 +69,10 @@ and i am to lazy to change the name */
     grid-template-columns: repeat(16, calc(100vw / 16));
     grid-template-rows: repeat(16, calc(70vh / 16));
 }
+.menu > div {
+    border: dotted 0.2rem #2a2d2f;
+    padding: 0.3rem;
+}
 
 /* About */
 .about {
@@ -82,7 +81,7 @@ and i am to lazy to change the name */
 
     grid-area: 1 / 1 / 5 / 8;
 }
-.cat-image {
+.about-cat {
     float: right;
     width: 10rem;
 }
@@ -102,15 +101,34 @@ and i am to lazy to change the name */
     font-style: italic;
 }
 .rndColor-preview {
-    --lenght: 5rem;
-    width: var(--lenght);
-    height: var(--lenght);
+    width: clamp(3rem, 5vw, 7rem);
+    height: clamp(3rem, 5vw, 7rem);
+
     background-color: var(--rndColor);
     border-radius: 0.9375rem;
 }
 .rndColor-hex {
     margin-top: 0.4rem;
     background-color: var(--rndColor);
+}
+
+/* Random Cat */
+.rndCats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    grid-area: 5 / 2 / 9 / 4; 
+}
+.rndCats-title {
+    font-weight: bold;
+    font-style: italic;
+}
+.rndCats-img {
+    width: clamp(3rem, 8vw, 8rem);
+    height: clamp(3rem, 8vh, 8rem);
+    border-radius: 0.9375rem;
 }
 
 #canvas {
