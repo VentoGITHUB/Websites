@@ -44,7 +44,17 @@ function rgbToHex(r, g, b) {
 function rnd255() {
     return Math.floor(Math.random() * 256);
 }
-const genColor = rgbToHex(rnd255(), rnd255(), rnd255()); 
+
+let genColor = rgbToHex(rnd255(), rnd255(), rnd255()); 
+if (genColor.length < 7) {
+    const missing = 7 - genColor.length;
+    let missingPart = "";
+    for (let i = 0; i < missing; i++) {
+        missingPart += "f";
+    }
+    genColor += missingPart;
+}
+
 root.style.setProperty("--rndColor", `${genColor}`);
 
 document.querySelector(".rndColor-hex").innerHTML = genColor;

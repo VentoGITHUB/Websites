@@ -81,10 +81,9 @@
 
 /* About */
 .about {
-    width: 30rem;
     padding-bottom: 1rem;
 
-    grid-area: 1 / 1 / 5 / 8;
+    grid-area: 1 / 1 / 5 / 6;
 }
 .about-cat {
     float: right;
@@ -152,6 +151,12 @@
     align-items: center;
 
     gap: 0.5rem;
+}
+
+/* Pref */
+.pref {
+    text-align: center;
+    grid-area: 5 / 4 / 8 / 6;
 }
 
 #canvas {
