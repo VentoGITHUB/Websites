@@ -71,3 +71,7 @@ async function rndCat() {
   document.querySelector('.rndCats-img').src = random;
 }
 rndCat();
+
+// Walkers
+import { Walker } from "./walk.js";
+const quake = new Walker(document.querySelector("#quake"), "./src/goobers/quake_idle.gif", "./src/goobers/quake_walk.gif", 1200);
